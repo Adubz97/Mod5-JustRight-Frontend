@@ -1,0 +1,38 @@
+.login {
+background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/10/mother-child-care-umbrella-silhouettes-sky-4k_1540575782.jpg");
+/* height: 100vh; */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.signup {
+background-image: url("https://p1.pxfuel.com/preview/749/467/674/people-active-black-white.jpg");
+/* height: 100vh; */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+.signup-position {
+  position: relative;
+  top: 0px;
+  left: -600px;
+}
+/* login form */
+.item-absolute {
+  position: relative;
+  top: 0px;
+  left: -600px;
+}
+
+.logo {
+  position: relative;
+  top: -25px;
+  left: 5px;
+  width: 200px
+}
+.color {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+}

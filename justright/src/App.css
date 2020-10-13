@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body, html {
+height: 100%;
+}
+
+.secondpicture {
+background-image: url("https://www.leapacademychildcare.com/wp-content/uploads/2019/05/00100lPORTRAIT_00100_BURST20190606132706937_COVER.jpg");
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.firstpicture {
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Solid_purple.svg/1024px-Solid_purple.svg.png");
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.thirdpicture {
+background-image: url("https://www.gannett-cdn.com/-mm-/0d9deec524e3ba188ea2a145b9f631162d152c28/c=0-293-5607-3447/local/-/media/2015/08/01/Greenville/B9318303499Z.1_20150801124851_000_GN5BDLIR6.1-0.jpg?width=3200&height=1801&fit=crop&format=pjpg&auto=webp");
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.logophoto{
+  height:200px;
+  width: 200px;
+}
