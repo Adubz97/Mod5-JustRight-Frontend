@@ -40,14 +40,25 @@ body, html {
 height: 100%;
 }
 
-.secondpicture {
+/* .secondpicture {
 background-image: url("https://www.leapacademychildcare.com/wp-content/uploads/2019/05/00100lPORTRAIT_00100_BURST20190606132706937_COVER.jpg");
 height: 100vh;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-}
+filter: sepia(60%) saturate(300%) brightness(70%) hue-rotate(265deg);
+opacity: 0.8
+} */
 .firstpicture {
+background-image: url("https://media.istockphoto.com/videos/they-are-such-a-happy-family-video-id1064887374?s=640x640");
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+filter: sepia(80%) saturate(100%) brightness(70%) hue-rotate(265deg);
+opacity: 0.8
+}
+.secondpicture {
 background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Solid_purple.svg/1024px-Solid_purple.svg.png");
 height: 100vh;
 background-position: center;
@@ -61,7 +72,171 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+.top-circle {
+/* background-image: url("https://lh3.googleusercontent.com/proxy/RoLvYdw1bt-VDNH1M62ZnENz6FARHkSLzO9FLsap836Nb4iKQPtIq1Ab-mrZqhJN9cN7h-vJOHsYJWtCBIfVvzHdx1P0i6f8B_sxZ4ZFCQvTlyoantLzix7XFlsyLgTig_dQc7y-T8xEZ7ol7LOHWG6t5r-i"); */
+height: 100vh;
+position: absolute;
+background-repeat: no-repeat;
+background-size: cover;
+top:300px;
+width: 2250px;
+}
 .logophoto{
   height:200px;
   width: 200px;
+}
+.ellipse {
+  background-color: #c586f0;
+  height: 750px;
+  width: 2294px;
+  border-radius: 50%;
+  position: absolute;
+  top:1083px;
+
+}
+.first-picture-text{
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  color: white;
+  font-size: 75px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.first-picture-text2{
+  position: absolute;
+  top: 420px;
+  left: 1350px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #9416aa;
+}
+.second-picture-text{
+  position: absolute;
+  top: 945px;
+  left: 900px;
+  color: black;
+  font-size: 45px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text2{
+  position: absolute;
+  top: 1010px;
+  left: 820px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text3{
+  position: absolute;
+  top: 1400px;
+  left: 400px;
+  color: black;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text4{
+  position: absolute;
+  top: 1450px;
+  left: 450px;
+  color: black;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text5{
+  position: absolute;
+  top: 1400px;
+  left: 1050px;
+  color: black;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text6{
+  position: absolute;
+  top: 1450px;
+  left: 1050px;
+  color: black;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text7{
+  position: absolute;
+  top: 1400px;
+  left: 1700px;
+  color: black;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.second-picture-text8{
+  position: absolute;
+  top: 1515px;
+  left: 380px;
+  color: black;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #9416aa;
+}
+.second-picture-text9{
+  position: absolute;
+  top: 1515px;
+  left: 1000px;
+  color: black;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #9416aa;
+}
+.second-picture-text10{
+  position: absolute;
+  top: 1470px;
+  left: 1650px;
+  color: black;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #9416aa;
+}
+
+
+.check-icon{
+  position: absolute;
+  top: 1270px;
+  left: 475px;
+  color: blue;
+}
+.people-icon{
+  position: absolute;
+  top: 1270px;
+  left: 1080px;
+  color: blue;
+}
+.user-check-icon{
+  position: absolute;
+  top: 1270px;
+  left: 1720px;
+  color: blue;
+}
+
+
+.first-word{
+  position: absolute;
+  top: 300px;
+  left: 150px;
+  font-size: 75px;
+  text-shadow: 2px 2px 4px #9416aa;
+  color: white;
+}
+.second-word{
+  position: absolute;
+  top: 380px;
+  left: 230px;
+  font-size: 75px;
+  text-shadow: 2px 2px 4px #9416aa;
+  color: white;
+}
+.third-word{
+  position: absolute;
+  top: 465px;
+  left: 290px;
+  font-size: 75px;
+  text-shadow: 2px 2px 4px #9416aa;
+  color: white;
+}
+
+.tabs-home-page{
+  height: 450px
 }

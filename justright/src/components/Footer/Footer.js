@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.css"
 import { Icon } from "semantic-ui-react";
 import { MDBIcon } from "mdbreact";
+import login from "../../assets/login.png";
 
 const Footer = () => {
   return (
@@ -20,9 +21,13 @@ const Footer = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                  <img className="footer-logo" alt="" src={login} />
+                  <h3 class="f-title f_600 t_color f_size_18">
+                    Let us help you.
+                  </h3>
                   <p>
-                    Don’t miss any updates of our new templates and extensions.!
+                    Don’t miss any updates of our new babysitters and tutors
+                    team!
                   </p>
                   <form
                     action="#"
@@ -61,25 +66,27 @@ const Footer = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                  <h3 class="f-title f_600 t_color f_size_18">
+                    To be determined
+                  </h3>
                   <ul class="list-unstyled f_list">
                     <li>
-                      <a href="#">Company</a>
+                      <a href="/">Something</a>
                     </li>
                     <li>
-                      <a href="#">Android App</a>
+                      <a href="/">Something</a>
                     </li>
                     <li>
-                      <a href="#">ios App</a>
+                      <a href="/">Something</a>
                     </li>
                     <li>
-                      <a href="#">Desktop</a>
+                      <a href="/">Something</a>
                     </li>
                     <li>
-                      <a href="#">Projects</a>
+                      <a href="/">Something</a>
                     </li>
                     <li>
-                      <a href="#">My tasks</a>
+                      <a href="/">Something</a>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +135,7 @@ const Footer = () => {
                   }}
                 >
                   <h3 class="f-title f_600 t_color f_size_18">
-                    Team Solutions
+                    Follow us !
                   </h3>
                   <div class="f_social_icon">
                     <a href="#" class="fab fa-facebook"></a>
@@ -156,13 +163,13 @@ const Footer = () => {
                 </div>
               </div>
               <div class="col-lg-6 col-sm-5 text-right">
-                 <div class="footer-position">
-                <h4>
-                  Made with{" "}
-                  <MDBIcon icon="heart" size="1x" className="red-text" /> in
-                  Washington, DC
-                </h4>
-              </div>
+                <div class="footer-position">
+                  <h4>
+                    Made with{" "}
+                    <MDBIcon icon="heart" size="1x" className="red-text" /> in
+                    Washington, DC
+                  </h4>
+                </div>
               </div>
             </div>
           </div>

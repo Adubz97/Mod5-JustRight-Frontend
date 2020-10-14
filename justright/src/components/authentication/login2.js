@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import { MDBBtn } from "mdbreact"
 import NavBar from "../Navbar/Navbar.js";
+import { Router } from "react-router";
 
 import "../../assets/scss/style.scss";
 import Aux from "../../hoc/_Aux";
@@ -9,9 +10,49 @@ import Breadcrumb from "../../App/layout/AdminLayout/Breadcrumb";
 import "./auth.css";
 import login from "../../assets/login.png";
 
-class SignUp1 extends React.Component {
+class login2 extends React.Component {
+  state = {
+    LoggedIn: false
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+
+  login = (e) => {
+    e.preventDefault();
+
+    fetch("http://localhost:3000/api/v1/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: this.state.username,
+        password: this.state.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((userInfo) => {
+        console.log(userInfo);
+        localStorage.token = userInfo.token;
+
+        if (userInfo.token) {
+          this.setState({
+            LoggedIn: true,
+          });
+        }
+        // this.props.setCurrentUser(userInfo.user_id);
+        // localStorage.id = userInfo.user_id;
+      });
+  };
+
   render() {
     return (
+
       <Aux>
         <NavBar />
         <Breadcrumb />
@@ -35,7 +76,9 @@ class SignUp1 extends React.Component {
 
                     <div className="input-group mb-3">
                       <input
-                        type="email"
+                        type="text"
+                        name="username"
+                        onChange={(e) => this.handleChange(e)}
                         className="form-control"
                         placeholder="Username"
                       />
@@ -43,6 +86,8 @@ class SignUp1 extends React.Component {
                     <div className="input-group mb-4">
                       <input
                         type="password"
+                        name="password"
+                        onChange={(e) => this.handleChange(e)}
                         className="form-control"
                         placeholder="password"
                       />
@@ -52,10 +97,18 @@ class SignUp1 extends React.Component {
                       gradient="blue"
                       rounded
                       className="btn-block z-depth-1a"
+                      onClick={(e) => this.login(e)}
+
+                      // href="#Dashboard"
+                      as={NavLink}
+                      to="/Dashboard"
                     >
+                      {/* <NavLink to="/Dashboard"> */}
                       Sign in
+                      {/* </NavLink> */}
                     </MDBBtn>
-                    <br/>
+                    {this.state.LoggedIn ? <Redirect to="/Dashboard"/> : null}
+                    <br />
                     <p className="mb-2 text-muted">
                       Forgot password?{" "}
                       <NavLink to="/auth/reset-password-1">Reset</NavLink>
@@ -75,7 +128,7 @@ class SignUp1 extends React.Component {
   }
 }
 
-export default SignUp1;
+export default login2;
 
 // style={{
 //                           width: "200px",

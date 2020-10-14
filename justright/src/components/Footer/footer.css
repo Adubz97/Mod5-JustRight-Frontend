@@ -206,4 +206,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 25px;
   left: 0px;
 }
+
+.footer-logo {
+  position: relative;
+  top: -25px;
+  left: 0px;
+  width: 200px
+}
 /*************footer End*****************/

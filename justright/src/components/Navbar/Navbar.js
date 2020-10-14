@@ -43,10 +43,11 @@ export default class NavBar extends React.Component {
                     alt=""
                     src={text}
                     style={{
-                      width: "200px",
-                      height: "30px",
+                      width: "280px",
+                      height: "50px",
                       position: "relative",
-                      left: "1000px",
+                      left: "970px"
+
                       // marginRight: "778px",
                       // marginLeft: "1020px"
                     }}
