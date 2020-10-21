@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from '../authentication/login.js'
 import Signup from '../authentication/signup.js'
 import "../../App.css";
-import Dashboard2 from "../Dashboard/Dashboard2.js"
+import Dashboard from "../Dashboard/Dashboard.js"
 import Footer from "../Footer/Footer.js"
 import { MDBIcon, MDBNav } from "mdbreact";
 
@@ -18,7 +18,8 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <div className="firstpicture"></div>
+      <div className="secondpicture"></div>
+    <div className="thirdpicture"></div>
       {/* <div className="firstpicture"></div> */}
       <div className="first-word">Building</div>
       <div className="second-word">Stronger</div>
@@ -32,7 +33,7 @@ const Home = () => {
         <br />
         and play more. It’s goodness all around.
       </div>
-      <div className="secondpicture"></div>
+      {/* <div className="secondpicture"></div> */}
       <div className="second-picture-text">What Makes us Different</div>
       <div className="second-picture-text2">
         Together, we’ll find the right fit for your family, matching our team’s
@@ -69,8 +70,7 @@ const Home = () => {
       <MDBIcon icon="check" size="8x" className="check-icon" />
       <MDBIcon icon="users" size="8x" className="people-icon" />
       <MDBIcon icon="user-check" size="8x" className="user-check-icon" />
-      <div className="thirdpicture"></div>
-
+      <div className="firstpicture"></div>
 
       <Footer />
     </div>

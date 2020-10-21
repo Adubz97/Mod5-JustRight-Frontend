@@ -8,12 +8,14 @@ import "../../assets/scss/style.scss";
 import Aux from "../../hoc/_Aux";
 import Breadcrumb from "../../App/layout/AdminLayout/Breadcrumb";
 import "./auth.css";
-import login from "../../assets/login.png";
+import login from "../../assets/logo.png";
 
 class login2 extends React.Component {
+
   state = {
     LoggedIn: false
   }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -39,6 +41,7 @@ class login2 extends React.Component {
       .then((userInfo) => {
         console.log(userInfo);
         localStorage.token = userInfo.token;
+        localStorage.id = userInfo.user.id
 
         if (userInfo.token) {
           this.setState({
@@ -49,10 +52,11 @@ class login2 extends React.Component {
         // localStorage.id = userInfo.user_id;
       });
   };
-
+//   redirect = () => {
+//   setTimeout(() => , 5500);
+// }
   render() {
     return (
-
       <Aux>
         <NavBar />
         <Breadcrumb />
@@ -60,19 +64,22 @@ class login2 extends React.Component {
           <div className="item-absolute">
             <div className="auth-wrapper">
               <div className="auth-content">
-                <div className="auth-bg">
+                <div className="auth-bg" >
                   <span className="r" />
-                  <span className="r s" />
-                  <span className="r s" />
+
+                  {/* <span className="r s" /> */}
+                  {/* <span className="r s" /> */}
                   <span className="r" />
                 </div>
-                <div className="card">
+                <div className="card" style={{ backgroundColor: "#14213d" }}>
                   <div className="card-body text-center">
                     <div className="mb-4">
                       <i className="feather icon-unlock auth-icon" />
                     </div>
                     <img className="logo" alt="" src={login} />
-                    <h3 className="mb-4">Login</h3>
+                    <h3 className="mb-4" style={{ color: "#219ebc" }}>
+                      Login
+                    </h3>
 
                     <div className="input-group mb-3">
                       <input
@@ -94,10 +101,12 @@ class login2 extends React.Component {
                     </div>
                     <MDBBtn
                       type="button"
-                      gradient="blue"
+                      outline
+                      color="warning"
                       rounded
                       className="btn-block z-depth-1a"
                       onClick={(e) => this.login(e)}
+                      // onClick={()=> this.props.login()}
 
                       // href="#Dashboard"
                       as={NavLink}
@@ -107,15 +116,23 @@ class login2 extends React.Component {
                       Sign in
                       {/* </NavLink> */}
                     </MDBBtn>
-                    {this.state.LoggedIn ? <Redirect to="/Dashboard"/> : null}
+                    {this.state.LoggedIn ? <Redirect to="/Dashboard" /> : null}
+                    {this.state.LoggedIn ? this.props.changeLogin() : null}
                     <br />
-                    <p className="mb-2 text-muted">
+                    <p className="mb-2" style={{ color: "#219ebc" }}>
                       Forgot password?{" "}
-                      <NavLink to="/auth/reset-password-1">Reset</NavLink>
+                      <NavLink
+                        style={{ color: "#fca311" }}
+                        to="/auth/reset-password-1"
+                      >
+                        Reset
+                      </NavLink>
                     </p>
-                    <p className="mb-0 text-muted">
+                    <p className="mb-0" style={{ color: "#219ebc" }}>
                       Don’t have an account?{" "}
-                      <NavLink to="/signup">Signup</NavLink>
+                      <NavLink style={{ color: "#fca311" }} to="/signup">
+                        Signup
+                      </NavLink>
                     </p>
                   </div>
                 </div>

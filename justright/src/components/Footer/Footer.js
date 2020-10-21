@@ -2,7 +2,9 @@ import React from "react";
 import "./footer.css"
 import { Icon } from "semantic-ui-react";
 import { MDBIcon } from "mdbreact";
-import login from "../../assets/login.png";
+import { MDBBtn } from "mdbreact";
+import logo from "../../assets/full-logo.png";
+import { Button } from "react-bootstrap";
 
 const Footer = () => {
   return (
@@ -21,14 +23,14 @@ const Footer = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <img className="footer-logo" alt="" src={login} />
+                  <img className="footer-logo" alt="" src={logo} />
                   <h3 class="f-title f_600 t_color f_size_18">
                     Let us help you.
                   </h3>
-                  <p>
+                  <h4 style={{ marginBottom: "30px", color: "#219ebc" }}>
                     Don’t miss any updates of our new babysitters and tutors
                     team!
-                  </p>
+                  </h4>
                   <form
                     action="#"
                     class="f_subscribe_two mailchimp"
@@ -42,9 +44,15 @@ const Footer = () => {
                       class="form-control memail"
                       placeholder="Email"
                     />
-                    <button class="btn btn_get btn_get_two" type="submit">
+                    <MDBBtn
+                      // class="btn btn_get btn_get_two"
+                      type="submit"
+                      outline
+                      rounded
+                      color="warning"
+                    >
                       Subscribe
-                    </button>
+                    </MDBBtn>
                     <p
                       class="mchimp-errmessage"
                       style={{ display: "none" }}
@@ -66,27 +74,33 @@ const Footer = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">
-                    To be determined
+                  <h3
+                    class="f-title f_600 t_color f_size_18"
+                    style={{ position: "relative", left: "50px" }}
+                  >
+                    Learn More
                   </h3>
-                  <ul class="list-unstyled f_list">
+                  <ul
+                    class="list-unstyled f_list"
+                    style={{ position: "relative", left: "50px" }}
+                  >
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">About Us</a>
                     </li>
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">Find a location</a>
                     </li>
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">Contact Us</a>
                     </li>
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">Become a Franchisee</a>
                     </li>
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">Speciality Care</a>
                     </li>
                     <li>
-                      <a href="/">Something</a>
+                      <a href="/">Investment</a>
                     </li>
                   </ul>
                 </div>
@@ -134,10 +148,16 @@ const Footer = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">
+                  <h3
+                    class="f-title f_600 t_color f_size_18"
+                    style={{ position: "relative", left: "-50px" }}
+                  >
                     Follow us !
                   </h3>
-                  <div class="f_social_icon">
+                  <div
+                    class="f_social_icon"
+                    style={{ position: "relative", left: "-80px" }}
+                  >
                     <a href="#" class="fab fa-facebook"></a>
                     <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-linkedin"></a>
@@ -157,14 +177,14 @@ const Footer = () => {
             <div class="row align-items-center">
               <div class="col-lg-6 col-sm-7">
                 <div class="footer-position">
-                  <h4 class="mb-0 f_400">
+                  <h4 class="mb-0 f_400" style={{ color: "#fca311" }}>
                     © JustRight Inc.. 2020 - All Rights Reserved.
                   </h4>
                 </div>
               </div>
               <div class="col-lg-6 col-sm-5 text-right">
                 <div class="footer-position">
-                  <h4>
+                  <h4 style={{ color: "#fca311" }}>
                     Made with{" "}
                     <MDBIcon icon="heart" size="1x" className="red-text" /> in
                     Washington, DC

@@ -8,7 +8,7 @@ import Aux from "../../hoc/_Aux";
 import Breadcrumb from "../../App/layout/AdminLayout/Breadcrumb";
 import DEMO from "../../store/constant";
 import NavBar from "../Navbar/Navbar.js";
-import login from "../../assets/login.png";
+import login from "../../assets/logo.png";
 
 class SignUp2 extends React.Component {
   handleChange = (e) => {
@@ -78,7 +78,7 @@ class SignUp2 extends React.Component {
             <div className="auth-wrapper">
               <div className="auth-content">
                 <div className="auth-bg">
-                  <span
+                  {/* <span
                     className="r"
                     style={{
                       position: "absolute",
@@ -95,15 +95,20 @@ class SignUp2 extends React.Component {
                     }}
                   />
                   <span className="r s" />
-                  <span className="r" />
+                  <span className="r" /> */}
                 </div>
-                <div className="card" style={{ width: "530px" }}>
+                <div
+                  className="card"
+                  style={{ width: "530px", backgroundColor: "#14213d" }}
+                >
                   <div className="card-body text-center">
                     <div className="mb-4">
                       {/* <i className="feather icon-user-plus auth-icon" /> */}
                     </div>
                     <img className="logo" alt="" src={login} />
-                    <h3 className="mb-4">Sign up</h3>
+                    <h3 className="mb-4" style={{ color: "#219ebc" }}>
+                      Sign up
+                    </h3>
                     <div className="input-group mb-3">
                       {/* 1st row */}
                       <div class="row">
@@ -277,19 +282,22 @@ class SignUp2 extends React.Component {
                     </div>
                     <MDBBtn
                       type="button"
-                      gradient="blue"
+                      outline
+                      color="warning"
                       rounded
                       className="btn-block z-depth-1a"
-                      style={{ width: "480px"}}
+                      style={{ width: "480px" }}
                       onClick={(e) => this.signUp(e)}
                     >
                       Sign up
                     </MDBBtn>
                     <br />
-                    <p className="mb-0 text-muted">
+                    <h6 className="mb-0 " style={{ color: "#219ebc" }}>
                       Already have an account?{" "}
-                      <NavLink to="/login">Login</NavLink>
-                    </p>
+                      <NavLink style={{ color: "#fca311" }} to="/login">
+                        Login
+                      </NavLink>
+                    </h6>
                   </div>
                 </div>
               </div>

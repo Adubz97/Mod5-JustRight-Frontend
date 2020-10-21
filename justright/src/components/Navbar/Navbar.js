@@ -3,15 +3,17 @@ import { Navbar, NavDropdown, Nav, Form, FormControl, Button, Container } from "
 import { render } from "react-dom";
 import { Link } from "react-router-dom";
 import { MDBAnimation } from "mdbreact";
-import logo from '../../assets/JR.PNG'
-import text from '../../assets/login.png'
+import { MDBBtn } from "mdbreact";
+import logo from '../../assets/logo.png'
+
 import "./navbar.css";
 
 export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar className="color-nav"
+        <Navbar
+          className="color-nav1"
           // bg="secondary"
           // variant="dark"
           fixed="top"
@@ -38,20 +40,20 @@ export default class NavBar extends React.Component {
               {/* <MDBAnimation type="bounce" infinite> */}
               {/* <Navbar.Brand className="img-fluid"> */}
               <Link to="/">
-                  <img
-                    className="img-fluid"
-                    alt=""
-                    src={text}
-                    style={{
-                      width: "280px",
-                      height: "50px",
-                      position: "relative",
-                      left: "970px"
+                <img
+                  className="img-fluid"
+                  alt=""
+                  src={logo}
+                  style={{
+                    width: "280px",
+                    height: "50px",
+                    position: "relative",
+                    left: "970px",
 
-                      // marginRight: "778px",
-                      // marginLeft: "1020px"
-                    }}
-                  />
+                    // marginRight: "778px",
+                    // marginLeft: "1020px"
+                  }}
+                />
               </Link>
               {/* </Navbar.Brand> */}
               {/* </MDBAnimation> */}
@@ -59,10 +61,24 @@ export default class NavBar extends React.Component {
 
             <Form>
               <Link to="/signup">
-                <Button variant="dark">SignUp</Button>{" "}
+                <MDBBtn
+                  outline
+                  color="warning"
+                  rounded
+                  variant="outline-yellow"
+                >
+                  SignUp
+                </MDBBtn>{" "}
               </Link>
               <Link to="/login">
-                <Button variant="dark">LogIn</Button>{" "}
+                <MDBBtn
+                  outline
+                  color="warning"
+                  rounded
+                  variant="outline-yellow"
+                >
+                  LogIn
+                </MDBBtn>{" "}
               </Link>
             </Form>
           </Navbar.Collapse>
