@@ -18,8 +18,17 @@ function Createappointment(props) {
   const [show, setShow] = React.useState(false);
   const [modalShow3, setModalShow3] = React.useState(false);
 
+  const [starttime, setStarttime] = React.useState("");
+  const [endtime, setEndtime] = React.useState("");
+  const [location, setLocation] = React.useState("");
+
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleStarttime = (e) => setStarttime(e);
+  const handleEndtime = (e) => setEndtime(e);
+  const handleLocation = (e) => setLocation(e);
 
   const handleChange = (e) => {
     this.setState({
@@ -29,7 +38,7 @@ function Createappointment(props) {
 
   const createAppointment = (e) => {
     e.preventDefault();
-
+    
     fetch("http://localhost:3000/api/v1/appointments", {
       method: "POST",
       headers: {
@@ -39,9 +48,9 @@ function Createappointment(props) {
       body: JSON.stringify({
         job_post_id: props.offer.job_post_id,
         offer_id: props.offer.id,
-        start_time: e.target.starttime.value,
-        end_time: e.target.endtime.value,
-        location: e.target.location.value,
+        start_time: starttime,
+        end_time: endtime,
+        location: location,
       }),
     })
       .then((res) => res.json())
@@ -66,7 +75,7 @@ function Createappointment(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "#14213d" }}>
-          <Form onSubmit={(e) => createAppointment(e)}>
+          <Form>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>
@@ -76,6 +85,7 @@ function Createappointment(props) {
                   name="starttime"
                   type="text"
                   placeholder="start time"
+                  onChange={(e) => handleStarttime(e.target.value)}
                 />
               </Form.Group>
 
@@ -87,6 +97,7 @@ function Createappointment(props) {
                   name="endtime"
                   type="text"
                   placeholder="end time"
+                  onCange={(e) => handleEndtime(e.target.value)}
                 />
               </Form.Group>
             </Form.Row>
@@ -95,7 +106,7 @@ function Createappointment(props) {
               <Form.Label>
                 <h4 style={{ color: "#fca311" }}>Location</h4>
               </Form.Label>
-              <Form.Control name="location" placeholder="1234 Main St" />
+              <Form.Control name="location" placeholder="1234 Main St" onChange={(e) => handleLocation(e.target.value)}/>
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -109,6 +120,7 @@ function Createappointment(props) {
             color="warning"
             // style={{ position: "absolute", left: "2080px", top: "130px" }}
             type="submit"
+            onClick={(e) => createAppointment(e)}
           >
             Create Appointment
           </MDBBtn>
