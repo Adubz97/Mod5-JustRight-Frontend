@@ -11,18 +11,18 @@ import "./auth.css";
 import login from "../../assets/logo.png";
 
 class login2 extends React.Component {
-
-  state = {
-    LoggedIn: false
+  componentDidMount() {
+    document.title = "JUSTRIGHT";
   }
+  state = {
+    LoggedIn: false,
+  };
 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
-
-
 
   login = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ class login2 extends React.Component {
       .then((userInfo) => {
         console.log(userInfo);
         localStorage.token = userInfo.token;
-        localStorage.id = userInfo.user.id
+        localStorage.id = userInfo.user.id;
 
         if (userInfo.token) {
           this.setState({
@@ -52,9 +52,9 @@ class login2 extends React.Component {
         // localStorage.id = userInfo.user_id;
       });
   };
-//   redirect = () => {
-//   setTimeout(() => , 5500);
-// }
+  //   redirect = () => {
+  //   setTimeout(() => , 5500);
+  // }
   render() {
     return (
       <Aux>
@@ -64,7 +64,7 @@ class login2 extends React.Component {
           <div className="item-absolute">
             <div className="auth-wrapper">
               <div className="auth-content">
-                <div className="auth-bg" >
+                <div className="auth-bg">
                   <span className="r" />
 
                   {/* <span className="r s" /> */}

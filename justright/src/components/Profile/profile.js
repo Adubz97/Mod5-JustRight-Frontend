@@ -114,15 +114,15 @@ class Profile extends Component {
               <h3
                 style={{
                   position: "relative",
-                  left: "95px",
+                  left: "65px",
                   top: "-35px",
                   width: "300px",
                   color: "#fca311",
                 }}
               >
-                Flatiron Graduate
+                Thanks for tunning in !!
               </h3>
-              <h3
+              {/* <h3
                 style={{
                   position: "relative",
                   left: "65px",
@@ -132,7 +132,7 @@ class Profile extends Component {
                 }}
               >
                 Thanks for tunning in !!
-              </h3>
+              </h3> */}
             </MDBModalBody>
             <MDBModalFooter style={{ backgroundColor: "#14213d" }}>
               <MDBBtn
@@ -140,7 +140,7 @@ class Profile extends Component {
                 rounded
                 color="warning"
                 onClick={this.props.toggle(8)}
-                style={{ position: "relative", left: "-100px" }}
+                style={{ position: "relative", left: "-120px" }}
               >
                 Close
               </MDBBtn>

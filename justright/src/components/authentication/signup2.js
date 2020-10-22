@@ -11,6 +11,10 @@ import NavBar from "../Navbar/Navbar.js";
 import login from "../../assets/logo.png";
 
 class SignUp2 extends React.Component {
+  componentDidMount() {
+    document.title = "JUSTRIGHT";
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,

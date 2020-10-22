@@ -38,7 +38,7 @@ function Createappointment(props) {
 
   const createAppointment = (e) => {
     e.preventDefault();
-    
+
     fetch("http://localhost:3000/api/v1/appointments", {
       method: "POST",
       headers: {
@@ -97,7 +97,7 @@ function Createappointment(props) {
                   name="endtime"
                   type="text"
                   placeholder="end time"
-                  onCange={(e) => handleEndtime(e.target.value)}
+                  onChange={(e) => handleEndtime(e.target.value)}
                 />
               </Form.Group>
             </Form.Row>
