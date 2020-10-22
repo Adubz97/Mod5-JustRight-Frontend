@@ -11,6 +11,7 @@ import Tutors from '../tutors/Tutors.js'
 import Babysitters from '../babysitters/babysitters.js'
 import Offers from '../Offers/Offers.js'
 import Appointments from '../Appointments/Appointments.js'
+import Profile from "../Profile/profile.js";
 
 
 class Dashboard extends React.Component {
@@ -132,7 +133,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Router>
-        <div >
+        <div>
           {this.props.LoggedIn ? null : <Redirect to="/login" />}
           <Navbar logout={this.logout} login={this.login} />
           <Sidebar />
@@ -167,6 +168,7 @@ class Dashboard extends React.Component {
                 <Appointments AllAppointments={this.state.Appointments} />
               )}
             />
+            <Route path="/Dashboard/Profile" component={Profile} />
           </Switch>
         </div>
       </Router>

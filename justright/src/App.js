@@ -10,6 +10,7 @@ import Login2 from "./components/authentication/login2.js";
 import Signup from "./components/authentication/signup.js";
 import Signup2 from "./components/authentication/signup2.js";
 import NavBar from "./components/Navbar/Navbar.js";
+import Profile from "./components/Profile/profile.js"
 
 
 class App extends Component {
@@ -62,6 +63,7 @@ class App extends Component {
           />
           {/* <Route path="/signup" component={Signup} /> */}
           <Route path="/signup" component={Signup2} />
+          
           {/* <Route path="/login" component={Login} /> */}
           <Route
             path="/login"

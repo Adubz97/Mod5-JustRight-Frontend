@@ -9,10 +9,10 @@ import {
   Container,
   CardColumns,
   Modal,
-  Col
+  Col,
 } from "react-bootstrap";
 
-class CreateJobPost extends React.Component {
+class Createoffer extends React.Component {
 
   handleChange = (e) => {
     this.setState({
@@ -20,32 +20,29 @@ class CreateJobPost extends React.Component {
     });
   };
 
+  // createJobPost = (e) => {
+  //   e.preventDefault();
 
-  createJobPost = (e) => {
-    e.preventDefault();
-
-    fetch("http://localhost:3000/api/v1/job_posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.token}`
-      },
-      body: JSON.stringify({
-        client_id: localStorage.id,
-        job_type: this.state.jobtype,
-        title: this.state.title,
-        description: this.state.description,
-        payrate: this.state.payrate,
-      }),
-    })
-      .then((res) => res.json())
-      .then((jobpost) => {
-        console.log(jobpost.jobpost.title);
-        this.props.addJobPost(jobpost.jobpost);
-      });
-
-  }
-
+  //   fetch("http://localhost:3000/api/v1/job_posts", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${localStorage.token}`,
+  //     },
+  //     body: JSON.stringify({
+  //       client_id: localStorage.id,
+  //       job_type: this.state.jobtype,
+  //       title: this.state.title,
+  //       description: this.state.description,
+  //       payrate: this.state.payrate,
+  //     }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((jobpost) => {
+  //       console.log(jobpost);
+  //       this.props.addJobPost(jobpost);
+  //     });
+  // };
 
   render() {
     return (
@@ -54,7 +51,6 @@ class CreateJobPost extends React.Component {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-
       >
         <Modal.Header closeButton>
           <Modal.Title
@@ -178,4 +174,4 @@ class CreateJobPost extends React.Component {
     );
   }
 }
-export default CreateJobPost;
+export default Createoffer;

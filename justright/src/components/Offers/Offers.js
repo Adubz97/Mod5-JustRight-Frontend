@@ -6,7 +6,10 @@ class Offers extends React.Component {
   render() {
     return (
       <div>
-        <div class="main">
+        <div
+          class="main"
+          style={{ backgroundColor: "#e5e5e5", height: "812px" }}
+        >
           <h2 style={{ position: "absolute", left: "1115px", top: "75px" }}>
             Offers
           </h2>
