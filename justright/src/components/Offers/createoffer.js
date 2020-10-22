@@ -11,7 +11,7 @@ import {
   Modal,
   Col,
 } from "react-bootstrap";
-
+import { MDBBtn } from "mdbreact";
 class Createoffer extends React.Component {
 
   handleChange = (e) => {
@@ -20,29 +20,29 @@ class Createoffer extends React.Component {
     });
   };
 
-  // createJobPost = (e) => {
-  //   e.preventDefault();
-
-  //   fetch("http://localhost:3000/api/v1/job_posts", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: `Bearer ${localStorage.token}`,
-  //     },
-  //     body: JSON.stringify({
-  //       client_id: localStorage.id,
-  //       job_type: this.state.jobtype,
-  //       title: this.state.title,
-  //       description: this.state.description,
-  //       payrate: this.state.payrate,
-  //     }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((jobpost) => {
-  //       console.log(jobpost);
-  //       this.props.addJobPost(jobpost);
-  //     });
-  // };
+  createOffer = (e) => {
+    e.preventDefault();
+    this.props.onHide()
+    fetch("http://localhost:3000/api/v1/offers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.token}`,
+      },
+      body: JSON.stringify({
+        caregiver_id: localStorage.id,
+        job_post_id: this.props.jobpost.id,
+        title: this.state.title,
+        description: this.state.description,
+        payrate: this.state.payrate,
+      }),
+    })
+      .then((res) => res.json())
+      .then((offer) => {
+        console.log(offer);
+        this.props.addOffer(offer);
+      });
+  };
 
   render() {
     return (
@@ -52,29 +52,44 @@ class Createoffer extends React.Component {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton style={{ backgroundColor: "#14213d" }}>
           <Modal.Title
-            style={{ position: "absolute", left: "330px" }}
+            style={{ position: "absolute", left: "330px", color: "#fca311" }}
             id="contained-modal-title-vcenter"
           >
-            New JobPost
+            Create offer
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: "#14213d" }}>
           <Form>
-            <Form.Group controlId="formGridAddress1">
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>
+                <h4 style={{ color: "#fca311" }}>Description:</h4>
+              </Form.Label>
+              <Form.Control
+               
+                name="description"
+                onChange={(e) => this.handleChange(e)}
+                as="textarea"
+                rows="3"
+              />
+            </Form.Group>
+            {/* <Form.Group controlId="formGridAddress1">
               <Form.Label>Title</Form.Label>
               <Form.Control
                 name="title"
                 onChange={(e) => this.handleChange(e)}
                 placeholder="Ex: Need a Math tutor..."
               />
-            </Form.Group>
+            </Form.Group> */}
 
             <Form.Row>
               <Form.Group as={Col} controlId="formGridState">
-                <Form.Label>Payrate</Form.Label>
+                <Form.Label>
+                  <h4 style={{ color: "#fca311" }}>Payrate:</h4>
+                </Form.Label>
                 <Form.Control
+
                   name="payrate"
                   onChange={(e) => this.handleChange(e)}
                   as="select"
@@ -90,7 +105,7 @@ class Createoffer extends React.Component {
                 </Form.Control>
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formGridState">
+              {/* <Form.Group as={Col} controlId="formGridState">
                 <Form.Label>JobType</Form.Label>
                 <Form.Control
                   name="jobtype"
@@ -109,18 +124,8 @@ class Createoffer extends React.Component {
                   <option>Grammer & Writing</option>
                   <option>Spanish</option>
                 </Form.Control>
-              </Form.Group>
+              </Form.Group> */}
             </Form.Row>
-
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Description:</Form.Label>
-              <Form.Control
-                name="description"
-                onChange={(e) => this.handleChange(e)}
-                as="textarea"
-                rows="3"
-              />
-            </Form.Group>
 
             {/* <Form.Row>
             <Form.Group as={Col} controlId="formGridCity">
@@ -159,16 +164,20 @@ class Createoffer extends React.Component {
           </Button> */}
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="primary"
+        <Modal.Footer style={{ backgroundColor: "#14213d" }}>
+          <MDBBtn
+            rounded
+            outline
+            color="warning"
             type="submit"
-            onClick={(e) => this.createJobPost(e)}
+            onClick={(e) => this.createOffer(e)}
             // onClick={this.props.onHide}
           >
             Submit
-          </Button>
-          <Button onClick={this.props.onHide}>Cancel</Button>
+          </MDBBtn>
+          <MDBBtn rounded outline color="warning" onClick={this.props.onHide}>
+            Cancel
+          </MDBBtn>
         </Modal.Footer>
       </Modal>
     );

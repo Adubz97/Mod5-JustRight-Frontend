@@ -27,20 +27,21 @@ function JobPosts(props) {
       <div>
         <MDBBtn
           rounded
+          outline
           color="indigo"
           style={{ position: "absolute", left: "2080px", top: "75px" }}
           onClick={() => setModalShow(true)}
         >
           Create a job post
-        </MDBBtn>{" "}
-        <MDBBtn
+        </MDBBtn>
+        {/* <MDBBtn
           rounded
           color="indigo"
           style={{ position: "absolute", left: "2080px", top: "130px" }}
           onClick={() => setModalShow3(true)}
         >
         submit an offer
-        </MDBBtn>{" "}
+        </MDBBtn>{" "} */}
         <CreateJobPost
           show={modalShow}
           onHide={() => setModalShow(false)}
@@ -77,6 +78,7 @@ function JobPosts(props) {
                 key={jobpost.id}
                 modalShow={modalShow2}
                 setModalShow={setModalShow2}
+                addOffer={props.addOffer}
               />
             ))}
             {/* {props.AllJobposts.map((jobpost) => (

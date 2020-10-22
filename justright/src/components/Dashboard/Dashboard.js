@@ -129,6 +129,16 @@ class Dashboard extends React.Component {
       Jobposts: [...this.state.Jobposts, jobpost]
     })
   }
+  addOffer = (offer) => {
+    this.setState({
+      Offers: [...this.state.Offers, offer]
+    })
+  }
+  addAppointment = (appointment) => {
+    this.setState({
+      Appointments: [...this.state.Appointments, appointment]
+    })
+  }
 
   render() {
     return (
@@ -155,12 +165,13 @@ class Dashboard extends React.Component {
                 <JobPosts
                   addJobPost={this.addJobPost}
                   AllJobposts={this.state.Jobposts}
+                  addOffer={this.addOffer}
                 />
               )}
             />
             <Route
               path="/Dashboard/offers"
-              render={() => <Offers AllOffers={this.state.Offers} />}
+              render={() => <Offers addAppointment={this.addAppointment} AllOffers={this.state.Offers} />}
             />
             <Route
               path="/Dashboard/appointments"

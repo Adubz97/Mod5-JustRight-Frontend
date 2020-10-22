@@ -70,7 +70,7 @@ const Home = () => {
       <MDBIcon icon="check" size="8x" className="check-icon" />
       <MDBIcon icon="users" size="8x" className="people-icon" />
       <MDBIcon icon="user-check" size="8x" className="user-check-icon" />
-      <div className="firstpicture"></div>
+      {/* <div className="firstpicture"></div> */}
 
       <Footer />
     </div>

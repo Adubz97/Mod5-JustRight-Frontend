@@ -25,30 +25,32 @@ function Jobpostdetails(props) {
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
+      <MDBBtn rounded outline variant="primary" onClick={handleShow}>
+        Details
+      </MDBBtn>
+      <Modal show={show} onHide={handleClose} centered size="lg">
+        <Modal.Header closeButton style={{ backgroundColor: "#14213d" }}>
           <Modal.Title>
-            <h2>{props.jobpost.title}</h2>
+            <h2 style={{ color: "#fca311" }}>{props.jobpost.title}</h2>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <h3>
-            Description: <br />
-          </h3>
+        <Modal.Body style={{ backgroundColor: "#14213d" }}>
+          <h3 style={{ color: "#fca311" }}>Description:</h3>
+
+          <h5 style={{ color: "#219ebc" }}>{props.jobpost.description}</h5>
           <br />
-          <h5>{props.jobpost.description}</h5>
-          <h5>Payrate: {props.jobpost.payrate}</h5>
+          <h5 style={{ color: "#fca311" }}>
+            Payrate: <a style={{ color: "#219ebc" }}>{props.jobpost.payrate}</a>
+          </h5>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="outline-yellow" onClick={handleClose}>
+        <Modal.Footer style={{ backgroundColor: "#14213d" }}>
+          <MDBBtn rounded outline color="warning" onClick={handleClose}>
             Close
-          </Button>
+          </MDBBtn>
           <MDBBtn
             rounded
-            color="indigo"
+            outline
+            color="warning"
             // style={{ position: "absolute", left: "2080px", top: "130px" }}
             onClick={() => setModalShow3(true)}
           >
@@ -59,7 +61,8 @@ function Jobpostdetails(props) {
       <Createoffer
         show={modalShow3}
         onHide={() => setModalShow3(false)}
-
+        jobpost={props.jobpost}
+        addOffer={props.addOffer}
       />
     </div>
   );

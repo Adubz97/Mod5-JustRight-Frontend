@@ -56,12 +56,12 @@ state = {
           <Nav.Link href="#pricing">Pricing</Nav.Link> */}
 
           <Form inline>
-            <FormControl
+            {/* <FormControl
               style={{ marginLeft: "1780px" }}
-              type="text"
-              placeholder="Search"
-              className="mr-sm-2"
-            />
+              // type="text"
+              // placeholder="Search"
+              // className="mr-sm-2"
+            /> */}
             <MDBBtn
               // href="/Dashboard/Profile"
               outline
@@ -70,6 +70,7 @@ state = {
               color="warning"
               style={{
                 marginRight: "-20px",
+                marginLeft: "1978px"
               }}
             >
               Profile

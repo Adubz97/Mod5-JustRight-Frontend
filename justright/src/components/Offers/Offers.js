@@ -26,7 +26,7 @@ class Offers extends React.Component {
             }}
           >
             {this.props.AllOffers.map((offer) => (
-              <OffersCard offer={offer} key={offer.id} />
+              <OffersCard offer={offer} key={offer.id} addAppointment={this.props.addAppointment} />
             ))}
           </CardColumns>
         </div>

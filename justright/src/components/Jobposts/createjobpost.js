@@ -11,7 +11,7 @@ import {
   Modal,
   Col
 } from "react-bootstrap";
-
+import { MDBBtn } from "mdbreact";
 class CreateJobPost extends React.Component {
 
   handleChange = (e) => {
@@ -54,17 +54,16 @@ class CreateJobPost extends React.Component {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton style={{ backgroundColor: "#14213d" }}>
           <Modal.Title
-            style={{ position: "absolute", left: "330px" }}
+            style={{ position: "absolute", left: "330px", color: "#fca311" }}
             id="contained-modal-title-vcenter"
           >
             New JobPost
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: "#14213d" }}>
           <Form>
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Title</Form.Label>
@@ -117,8 +116,11 @@ class CreateJobPost extends React.Component {
             </Form.Row>
 
             <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Description:</Form.Label>
+              <Form.Label>
+                <h4 style={{ color: "#fca311" }}>Description:</h4>
+              </Form.Label>
               <Form.Control
+               
                 name="description"
                 onChange={(e) => this.handleChange(e)}
                 as="textarea"
@@ -163,16 +165,20 @@ class CreateJobPost extends React.Component {
           </Button> */}
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="primary"
+        <Modal.Footer style={{ backgroundColor: "#14213d" }}>
+          <MDBBtn
+            color="warning"
+            outline
+            rounded
             type="submit"
             onClick={(e) => this.createJobPost(e)}
             // onClick={this.props.onHide}
           >
             Submit
-          </Button>
-          <Button onClick={this.props.onHide}>Cancel</Button>
+          </MDBBtn>
+          <MDBBtn outline rounded color="warning" onClick={this.props.onHide}>
+            Cancel
+          </MDBBtn>
         </Modal.Footer>
       </Modal>
     );

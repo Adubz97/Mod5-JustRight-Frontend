@@ -9,7 +9,7 @@ import {
   Card,
   Modal
 } from "react-bootstrap";
-import Picture from "../../assets/Profile Picture.png";
+// import Picture from "../../assets/Profile Picture.png";
 import Jobpostdetails from "./jobpostdetails.js"
 
 class JobPostCard extends React.Component {
@@ -25,31 +25,34 @@ class JobPostCard extends React.Component {
       //   gridTemplateColumns: "auto auto auto auto auto auto"
       // }}
       >
-        <Card style={{ width: "12rem" }}>
+        <Card style={{ width: "20rem" }}>
           <Card.Img
             variant="top"
             src={
               "https://www.moneycrashers.com/wp-content/uploads/2018/08/tutoring-papers-1068x713.jpg"
             }
-            style={{ height: "200px", width: "192px" }}
+            style={{ height: "200px", width: "321px" }}
           />
-          <Card.Body>
-            <Card.Title>{this.props.jobpost.title}</Card.Title>
-            <Card.Text>{this.props.jobpost.description}</Card.Text>
-            <Card.Text>{this.props.jobpost.payrate}</Card.Text>
+          <Card.Body style={{ backgroundColor: "#14213d" }}>
+            <Card.Title style={{ color: "#fca311" }}>
+              {this.props.jobpost.title}
+            </Card.Title>
+            {/* <Card.Text>{this.props.jobpost.description}</Card.Text> */}
+            {/* <Card.Text>{this.props.jobpost.payrate}</Card.Text> */}
             {/* <Button
               onClick={() => this.props.setModalShow(true)}
               variant="primary"
             >
               Submit Offer
             </Button> */}
-        <Jobpostdetails
-          // show={this.props.modalShow}
-          // onHide={() => this.props.setModalShow(false)}
-          // title={this.props.jobpost.title}
-          // description={this.props.jobpost.description}
+            <Jobpostdetails
+              // show={this.props.modalShow}
+              // onHide={() => this.props.setModalShow(false)}
+              // title={this.props.jobpost.title}
+              // description={this.props.jobpost.description}
               jobpost={this.props.jobpost}
-        />
+              addOffer={this.props.addOffer}
+            />
           </Card.Body>
         </Card>
       </div>
