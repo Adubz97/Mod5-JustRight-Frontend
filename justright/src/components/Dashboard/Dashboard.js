@@ -1,10 +1,10 @@
 import React from "react";
-import { NavLink, Redirect, BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { Redirect, BrowserRouter as Router, Switch, Route} from "react-router-dom";
 //import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import "./dashboard.css"
 import Navbar from './navbar.js'
 import Sidebar from './sidebar.js'
-import Home from '../Home/Home.js'
+
 import JobPosts from '../Jobposts/jobposts.js'
 import Calendar from '../Calendar/Calendar.js'
 import Tutors from '../tutors/Tutors.js'
@@ -186,6 +186,6 @@ class Dashboard extends React.Component {
       </Router>
     );
   }
-};
+}
 
 export default Dashboard;

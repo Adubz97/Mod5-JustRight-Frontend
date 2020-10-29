@@ -1,10 +1,8 @@
 import React from "react";
 import "./footer.css"
-import { Icon } from "semantic-ui-react";
 import { MDBIcon } from "mdbreact";
 import { MDBBtn } from "mdbreact";
 import logo from "../../assets/full-logo.png";
-import { Button } from "react-bootstrap";
 
 const Footer = () => {
   return (
