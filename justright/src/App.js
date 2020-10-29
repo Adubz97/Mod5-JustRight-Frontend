@@ -1,12 +1,12 @@
+import React from 'react';
 import { Component } from "react";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './components/Home/Home.js'
 import Dashboard from './components/Dashboard/Dashboard.js'
 import Login from "./components/authentication/login.js";
 import Signup from "./components/authentication/signup.js";
-// import React, { useState } from 'react';
 // import NavBar from "./components/Navbar/Navbar.js";
 // import Profile from "./components/Profile/profile.js"
 
