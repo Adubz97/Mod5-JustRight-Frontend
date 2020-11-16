@@ -1,6 +1,9 @@
 # JustRight
 An app that connects parents to top quality childcare services such as tutoring and babysitting. 
 
+## JustRight - Demo
+[![JustRight Demo Video](https://img.youtube.com/vi/sr2GfYfxuak/0.jpg)](https://youtu.be/sr2GfYfxuak)
+
  ## Available features:
  
   - Core Functionalities:
@@ -22,15 +25,10 @@ An app that connects parents to top quality childcare services such as tutoring 
     - Run "rails db:create"
     - Run "rails db:migrate"
     - Run "rails s"
-  - After the backend is up, cd into JustRight-Frontend directory
+  - After the backend is up, cd into JustRight-Frontend file directory
     - Run "npm install"
     - Run "npm start"
  
-  
-## JustRight - Demo
-[![JustRight Demo Video](https://img.youtube.com/vi/sr2GfYfxuak/0.jpg)](https://youtu.be/sr2GfYfxuak)
-
-
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/Adubz97/Mod5-JustRight-Frontend/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
